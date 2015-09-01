@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>ElevationProfileWidget Test Page</title>
+        <link rel="stylesheet" type="text/css"
+              href="../../sample_themes/elevationprofiletheme/elevationprofiletheme.css"/>
+        <script type="text/javascript">
+            var dojoConfig = {
+                parseOnLoad: true,
+                async: true,
+                isDebug: true,
+                baseUrl: "../../",
+                tlmSiblingOfDojo: false,
+                packages: [
+                    {name: "dojo", location:
+                                "http://localhost:8080/ct-mapapps-webapp-3.2.0/resources/jsregistry/root/dojo/1.10.4"},
+                    {name: "dijit", location:
+                                "http://localhost:8080/ct-mapapps-webapp-3.2.0/resources/jsregistry/root/dijit/1.10.4"},
+                    {name: "query", location: "query"}
+                ]
+            }
+        </script>
+        <script type="text/javascript"
+        src="http://localhost:8080/ct-mapapps-webapp-3.2.0/resources/jsregistry/root/dojo/1.10.4/dojo.js"></script>
+        <script type="text/javascript">
+            require([
+                "dojo/ready", "elevationprofile/ElevationProfileWidget"
+            ], function (ready, ElevationProfileWidget) {
+                ready(function () {
+                    new ElevationProfileWidget({}, "widget");
+                });
+            });
+        </script>
+    </head>
+    <body class="elevationprofiletheme">
+        <div id="widget"></div>
+    </body>
+</html>

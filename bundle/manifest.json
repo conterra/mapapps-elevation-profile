@@ -1,0 +1,86 @@
+{
+  "Bundle-SymbolicName": "dn_elevationprofile",
+  "Bundle-Version": "1.0.1",
+  "Bundle-Name": "${bundleName}",
+  "Bundle-Description": "${bundleDescription}",
+  "Bundle-Vendor": "con terra GmbH",
+  "Product-Name": "map.apps Developer Network",
+  "Config-Bundle-Location": "/config",
+  "Require-Bundle": [],
+  "CSS-Themes-Extension": [
+    {
+      "name": "*",
+      "files": ["./styles/style.css"]
+    }
+  ],
+  "layout-widgets": [
+    {
+      "role": "elevationProfile",
+      "window": {
+        "windowClass": "noTitleBar",
+        "title": "${windowTitle}",
+        "dockable": "true",
+        "dockingBar": "${id}-dockingBarBottomLeft",
+        "dockTool": "elevationProfileTool",
+        "marginBox": {
+          "l": 0,
+          "h": 270,
+          "r": 0,
+          "b": 33
+        },
+        "closable": "true",
+        "minimizeOnClose": "true",
+        "resizable": "false",
+        "draggable": "false",
+        "tools": [],
+        "fixEdgesInViewPort": {"t": false}
+      }
+    }
+  ],
+  "Components": [
+    {
+      "name": "ElevationProfileWidgetFactory",
+      "provides": [
+        "dijit.Widget",
+        "ct.framework.api.EventHandler"
+      ],
+      "properties": {
+        "Event-Topics": [
+          {
+            "topic": "ct/window/HIDDEN",
+            "method": "_onWindowHide"
+          }
+        ],
+        "widgetRole": "elevationProfile",
+        "unit": "esriMeters"
+      },
+      "instanceFactory": true,
+      "immediate": true,
+      "references": [
+        {
+          "name": "_esriMap",
+          "providing": "esri.Map"
+        },
+        {
+          "name": "_tool",
+          "providing": "ct.tools.Tool",
+          "filter": "(id=elevationProfileTool)"
+        }
+      ]
+    },
+    {
+      "name": "${toolName}",
+      "impl": "ct/tools/Tool",
+      "provides": ["ct.tools.Tool"],
+      "propertiesConstructor": true,
+      "properties": {
+        "id": "elevationProfileTool",
+        "toolRole": "toolset",
+        "title": "${toolName}",
+        "tooltip": "${toolTooltip}",
+        "togglable": true,
+        "iconClass": "icon-chart-line"
+      }
+    }
+  ]
+}
