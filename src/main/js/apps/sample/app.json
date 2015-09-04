@@ -1,7 +1,8 @@
 {
   "load": {
     "bundleLocations": [
-      "bundles"
+      "bundles",
+      "localbundles"
     ],
     "styles": ["${app}:app.css"],
     "allowedBundles": [
