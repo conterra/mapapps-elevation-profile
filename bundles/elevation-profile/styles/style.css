@@ -1,0 +1,37 @@
+.digitize {
+    margin: 5px 0;
+    display: inline;
+    margin-right: 10px;
+}
+
+.digitize > label {
+    margin-right: 5px;
+}
+
+.selectunit {
+    margin: 5px 0;
+    display: inline;
+}
+
+.selectunit > label {
+    margin-right: 5px;
+}
+
+.clear {
+    display: inline;
+}
+
+.profileChart {
+    overflow: hidden;
+}
+
+.esriElevationProfileChartNode * {
+    color: inherit!important;
+}
+
+.summer .esriElevationProfileChartNode svg text,
+.winter .esriElevationProfileChartNode svg text,
+.autumn .esriElevationProfileChartNode svg text,
+.spring .esriElevationProfileChartNode svg text{
+    fill: #45474d;
+}

@@ -1,0 +1,44 @@
+{
+  "dataform-version": "1.0.0",
+  "type": "gridpanel",
+  "showLabels": true,
+  "children": [
+    {
+      "type": "selectbox",
+      "field": "unit",
+      "label": "${unit}",
+      "searchAttribute": "name",
+      "labelAttribute": "${name}",
+      "values": [
+        {
+          "name": "${miles}",
+          "value": "esriMiles"
+        },
+        {
+          "name": "${kilometers}",
+          "value": "esriKilometers"
+        },
+        {
+          "name": "${meters}",
+          "value": "esriMeters"
+        },
+        {
+          "name": "${nauticalmiles}",
+          "value": "esriNauticalMiles"
+        },
+        {
+          "name": "${yards}",
+          "value": "esriYards"
+        },
+        {
+          "name": "${feet}",
+          "value": "esriFeet"
+        }
+      ],
+      "max": 2,
+      "size": {
+        "w": 100
+      }
+    }
+  ]
+}
