@@ -1,6 +1,6 @@
 {
-    "Bundle-SymbolicName": "elevationprofile-config",
-    "Bundle-Version": "1.0",
+    "Bundle-SymbolicName": "devnet_elevation_profile-config",
+    "Bundle-Version": "1.0.0",
     "Bundle-Name": "${bundleName}",
     "Bundle-Description": "Configuration Bundle for Elevation Profile",
     "Bundle-Vendor": "con terra GmbH",
@@ -33,8 +33,8 @@
             "instanceFactory": true,
             "properties": {
                 "dataformFile": "resource('./DataForm.json')",
-                "bid": "sample_elevationprofile",
-                "pid": "sample_elevationprofile-ElevationProfileWidgetFactory",
+                "bid": "devnet_elevation_profile",
+                "pid": "devnet_elevation_profile-ElevationProfileWidgetFactory",
                 "id": "elevationProfileBuilderWidget",
                 "defaultProperties": {
                     "unit": "esriMeters"
