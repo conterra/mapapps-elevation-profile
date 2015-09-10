@@ -43,6 +43,5 @@ define([
             var unit = props.unit;
             this.epw.set("unit", unit);
         }
-
     });
 });

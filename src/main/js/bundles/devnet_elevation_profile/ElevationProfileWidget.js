@@ -33,25 +33,29 @@ define([
     "dojo/dom",
     "dojo/on",
     "dojo/domReady!"
-], function (declare, _Widget, _TemplatedMixin,
-        _WidgetsInTemplateMixin, TextBox, CheckBox, Button,
-        templateStringContent, Select, Draw, SimpleLineSymbol, CartographicLineSymbol, Graphic,
+], function (declare,
+        _Widget,
+        _TemplatedMixin,
+        _WidgetsInTemplateMixin,
+        TextBox,
+        CheckBox,
+        Button,
+        templateStringContent,
+        Select,
+        Draw,
+        SimpleLineSymbol,
+        CartographicLineSymbol,
+        Graphic,
         Units,
         ElevationsProfileWidget,
         Color, dom, on) {
     return declare([_Widget, _TemplatedMixin,
         _WidgetsInTemplateMixin], {
         templateString: templateStringContent,
-        constructor: function (args) {
-            this.inherited(arguments);
-            var i18n = this.i18n = args.i18n;
-            var props = args.properties;
-            var unit = this.unit = props.unit;
-            var map = this.map = args.map;
-
-        },
         postCreate: function () {
             this.inherited(arguments);
+            var props = this.properties;
+            var unit = this.unit = props.unit;
             this._comboboxNode.set("value", this.unit);
         },
         startup: function () {
