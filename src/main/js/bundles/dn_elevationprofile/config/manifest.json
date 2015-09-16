@@ -1,5 +1,5 @@
 {
-    "Bundle-SymbolicName": "devnet_elevation_profile-config",
+    "Bundle-SymbolicName": "dn_elevationprofile-config",
     "Bundle-Version": "1.0.0",
     "Bundle-Name": "${bundleName}",
     "Bundle-Description": "Configuration Bundle for Elevation Profile",
@@ -33,8 +33,8 @@
             "instanceFactory": true,
             "properties": {
                 "dataformFile": "resource('./DataForm.json')",
-                "bid": "devnet_elevation_profile",
-                "pid": "devnet_elevation_profile-ElevationProfileWidgetFactory",
+                "bid": "dn_elevationprofile",
+                "pid": "dn_elevationprofile-ElevationProfileWidgetFactory",
                 "id": "elevationProfileBuilderWidget",
                 "defaultProperties": {
                     "unit": "esriMeters"

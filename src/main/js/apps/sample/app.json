@@ -6,7 +6,8 @@
         ],
         "styles": ["${app}:app.css"],
         "allowedBundles": [
-            "devnet_elevation_profile",
+            "wizard",
+            "dn_elevationprofile",
             "themes",
             "templates",
             "system",
