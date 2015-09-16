@@ -1,6 +1,6 @@
 {
     "Bundle-SymbolicName": "dn_elevationprofile-config",
-    "Bundle-Version": "1.0.0",
+    "Bundle-Version": "1.0.2",
     "Bundle-Name": "${bundleName}",
     "Bundle-Description": "Configuration Bundle for Elevation Profile",
     "Bundle-Vendor": "con terra GmbH",
