@@ -34,21 +34,21 @@ define([
     "dojo/on",
     "dojo/domReady!"
 ], function (declare,
-        _Widget,
-        _TemplatedMixin,
-        _WidgetsInTemplateMixin,
-        TextBox,
-        CheckBox,
-        Button,
-        templateStringContent,
-        Select,
-        Draw,
-        SimpleLineSymbol,
-        CartographicLineSymbol,
-        Graphic,
-        Units,
-        ElevationsProfileWidget,
-        Color, dom, on) {
+             _Widget,
+             _TemplatedMixin,
+             _WidgetsInTemplateMixin,
+             TextBox,
+             CheckBox,
+             Button,
+             templateStringContent,
+             Select,
+             Draw,
+             SimpleLineSymbol,
+             CartographicLineSymbol,
+             Graphic,
+             Units,
+             ElevationsProfileWidget,
+             Color, dom, on) {
     return declare([_Widget, _TemplatedMixin,
         _WidgetsInTemplateMixin], {
         templateString: templateStringContent,
@@ -71,14 +71,10 @@ define([
             this._initToolbar("freehandpolyline");
         },
         _clear: function () {
-            this.map.graphics.clear();
+            var toolbar = this.tb;
+            toolbar && toolbar.deactivate();
+            this.map.graphics.remove(this.graphic);
             this.epWidget.clearProfile(); //Clear profile
-        },
-        _onWindowHide: function (event) {
-            var eventClass = event._properties.entries.source.windowClass;
-            if (eventClass === "elevationProfileWidgetFactory noTitleBar") {
-                this._clear();
-            }
         },
         _init: function () {
             on(this._comboboxNode, "change", function (evt) {
@@ -90,11 +86,11 @@ define([
 
             // lineSymbol used for freehand polyline and line.
             this.lineSymbol = this.linesymbol = new CartographicLineSymbol(
-                    CartographicLineSymbol.STYLE_SOLID,
-                    new Color([255, 0, 0]), 2,
-                    CartographicLineSymbol.CAP_ROUND,
-                    CartographicLineSymbol.JOIN_MITER, 2
-                    );
+                CartographicLineSymbol.STYLE_SOLID,
+                new Color([255, 0, 0]), 2,
+                CartographicLineSymbol.CAP_ROUND,
+                CartographicLineSymbol.JOIN_MITER, 2
+            );
             var unit = this.unit;
             var profileParams = {
                 map: this.map,
@@ -124,7 +120,7 @@ define([
             this.tb.deactivate();
             this.map.enableMapNavigation();
             var symbol = this.lineSymbol;
-            this.map.graphics.add(new Graphic(evt.geometry, symbol));
+            this.graphic = this.map.graphics.add(new Graphic(evt.geometry, symbol));
             var epWidget = this.epWidget;
             epWidget.set("profileGeometry", evt.geometry);
             on(epWidget, "update-profile", function (evt) {

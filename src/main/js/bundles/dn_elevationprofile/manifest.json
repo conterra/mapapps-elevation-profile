@@ -45,12 +45,6 @@
         "ct.framework.api.EventHandler"
       ],
       "properties": {
-        "Event-Topics": [
-          {
-            "topic": "ct/window/HIDDEN",
-            "method": "_onWindowHide"
-          }
-        ],
         "widgetRole": "elevationProfile",
         "unit": "esriMeters"
       },

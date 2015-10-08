@@ -15,10 +15,12 @@
  */
 define([
     "dojo/_base/declare",
-    "./ElevationProfileWidget"
+    "./ElevationProfileWidget",
+    "ct/_Connect"
 ], function (declare,
-             ElevationProfileWidget) {
-    return declare([], {
+             ElevationProfileWidget,
+             _Connect) {
+    return declare([_Connect], {
         activate: function () {
             this.inherited(arguments);
             var map = this._esriMap;
@@ -31,6 +33,10 @@ define([
                 "i18n": i18n,
                 "tool": tool
             });
+            this.connect(tool, "onDeactivate", function(){
+                epw._clear();
+            });
+
         },
         deactivate: function () {
             this.epw._clear();
