@@ -4,11 +4,14 @@
     "Bundle-Name": "${bundleName}",
     "Bundle-Description": "Configuration Bundle for Elevation Profile",
     "Bundle-Vendor": "con terra GmbH",
-    "Require-Bundle": [{
+    "Require-Bundle": [
+        {
             "name": "dataform"
-        }, {
+        },
+        {
             "name": "wizard"
-        }],
+        }
+    ],
     "Components": [
         {
             "name": "BuilderEntry",
@@ -16,7 +19,7 @@
             "provides": ["wizard.MenuEntry"],
             "propertiesConstructor": true,
             "properties": {
-                "parentNodeId" : "appBuilderToolsNode",
+                "parentNodeId": "appBuilderToolsNode",
                 "menuNode": {
                     "priority": 10,
                     "title": "${windowTitle}",

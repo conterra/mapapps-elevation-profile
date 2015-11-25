@@ -19,7 +19,7 @@
       "window": {
         "windowClass": "noTitleBar",
         "title": "${windowTitle}",
-        "dockable": "true",
+        "dockable": true,
         "dockingBar": "${id}-dockingBarBottomLeft",
         "dockTool": "elevationProfileTool",
         "marginBox": {
@@ -28,10 +28,10 @@
           "r": 0,
           "b": 33
         },
-        "closable": "true",
-        "minimizeOnClose": "true",
-        "resizable": "false",
-        "draggable": "false",
+        "closable": true,
+        "minimizeOnClose": true,
+        "resizable": false,
+        "draggable": false,
         "tools": [],
         "fixEdgesInViewPort": {"t": false}
       }
