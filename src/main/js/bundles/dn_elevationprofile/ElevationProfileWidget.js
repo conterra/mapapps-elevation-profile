@@ -91,10 +91,12 @@ define([
                 CartographicLineSymbol.CAP_ROUND,
                 CartographicLineSymbol.JOIN_MITER, 2
             );
-            var unit = this.unit;
+            var unit = this.unit,
+            props = this.properties;
             var profileParams = {
                 map: this.map,
-                profileTaskUrl: "https://elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer",
+                profileTaskUrl: props.profileTaskUrl,
+                chartOptions: props.chartOptions,
                 scalebarUnits: unit
             };
 
