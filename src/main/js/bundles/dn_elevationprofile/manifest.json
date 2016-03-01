@@ -10,7 +10,9 @@
   "CSS-Themes-Extension": [
     {
       "name": "*",
-      "files": ["./styles/style.css"]
+      "files": [
+        "./styles/style.css"
+      ]
     }
   ],
   "layout-widgets": [
@@ -33,7 +35,9 @@
         "resizable": false,
         "draggable": false,
         "tools": [],
-        "fixEdgesInViewPort": {"t": false}
+        "fixEdgesInViewPort": {
+          "t": false
+        }
       }
     }
   ],
@@ -47,9 +51,10 @@
       "properties": {
         "widgetRole": "elevationProfile",
         "unit": "esriMeters",
-		"profileTaskUrl": "https://elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer",
-        "chartOptions":{
-          "chartTitleFontSize": 13,
+        "profileTaskUrl": "https://elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer",
+        "chartOptions": {
+          "title": "Elevation Profile",
+          "chartTitleFontSize": 14,
           "axisTitleFontSize": 11,
           "axisLabelFontSize": 9,
           "indicatorFontColor": "#eee",
@@ -84,7 +89,9 @@
     {
       "name": "${toolName}",
       "impl": "ct/tools/Tool",
-      "provides": ["ct.tools.Tool"],
+      "provides": [
+        "ct.tools.Tool"
+      ],
       "propertiesConstructor": true,
       "properties": {
         "id": "elevationProfileTool",
