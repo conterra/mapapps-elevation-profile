@@ -24,5 +24,11 @@ define({
     meters: "Meter",
     nauticalmiles: "Seemeilen",
     yards: "Yard",
-    feet: "Fuß"
+    feet: "Fuß",
+    chartOptions: {
+        title: "Titel",
+        chartTitleFontSize: "Titel-Schriftgr\u00f6ße",
+        axisTitleFontSize: "Achsentitle-Schriftgr\u00f6ße",
+        axisLabelFontSize: "Achsenbeschriftung-Schriftgr\u00f6ße"
+    }
 });

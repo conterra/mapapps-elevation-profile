@@ -1,6 +1,6 @@
 {
     "Bundle-SymbolicName": "dn_elevationprofile-config",
-    "Bundle-Version": "1.0.2",
+    "Bundle-Version": "1.0",
     "Bundle-Name": "${bundleName}",
     "Bundle-Description": "Configuration Bundle for Elevation Profile",
     "Bundle-Vendor": "con terra GmbH",
@@ -40,7 +40,27 @@
                 "pid": "dn_elevationprofile-ElevationProfileWidgetFactory",
                 "id": "elevationProfileBuilderWidget",
                 "defaultProperties": {
-                    "unit": "esriMeters"
+                    "unit": "esriMeters",
+                    "profileTaskUrl": "https://elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer",
+                    "chartOptions": {
+                        "title": "Elevation Profile",
+                        "chartTitleFontSize": 14,
+                        "axisTitleFontSize": 11,
+                        "axisLabelFontSize": 9,
+                        "indicatorFontColor": "#eee",
+                        "indicatorFillColor": "#666",
+                        "titleFontColor": "#eee",
+                        "axisFontColor": "#ccc",
+                        "axisMajorTickColor": "#333",
+                        "skyTopColor": "#B0E0E6",
+                        "skyBottomColor": "#4682B4",
+                        "waterLineColor": "#eee",
+                        "waterTopColor": "#ADD8E6",
+                        "waterBottomColor": "#0000FF",
+                        "elevationLineColor": "#D2B48C",
+                        "elevationTopColor": "#8B4513",
+                        "elevationBottomColor": "#CD853F"
+                    }
                 },
                 "description": "${description}"
             },
