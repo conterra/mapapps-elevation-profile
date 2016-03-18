@@ -4,9 +4,6 @@
       "localbundles",
       "bundles"
     ],
-    "styles": [
-      "${app}:app.css"
-    ],
     "allowedBundles": [
       "wizard",
       "dn_elevationprofile",
@@ -19,6 +16,7 @@
       "notifier",
       "toolset",
       "toolrules",
+      "banner",
       "parametermanager"
     ]
   },
@@ -62,17 +60,19 @@
         }
       }
     },
+    "banner": {
+      "BannerWidget": {
+        "image": "https://conterra.de/~/media/conterra/images/site_logos/conterra-logo.ashx",
+        "imagePosition": "above",
+        "link": "http://conterra.de"
+      }
+    },
     "themes": {
       "ThemeModel": {
         "_selectedTheme": "everlasting"
       },
       "ThemeSelector": {
         "componentEnabled": false
-      },
-      "ApplicationStyleWriter": {
-        "styles": [
-          "${app}:app.css"
-        ]
       }
     },
     "templates": {
