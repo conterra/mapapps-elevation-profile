@@ -56,7 +56,7 @@ define([
             this.inherited(arguments);
             var props = this.properties;
             var unit = this.unit = props.unit;
-            this._comboboxNode.set("value", this.unit);
+            this._comboboxNode.set("value", unit);
         },
         startup: function () {
             this.inherited(arguments);
@@ -92,7 +92,7 @@ define([
                 CartographicLineSymbol.JOIN_MITER, 2
             );
             var unit = this.unit,
-            props = this.properties;
+                props = this.properties;
             var profileParams = {
                 map: this.map,
                 profileTaskUrl: props.profileTaskUrl,
@@ -104,14 +104,17 @@ define([
             this.epWidget.startup();
             on(this.epWidget, "load", function (evt) {
                 this._setProcessing(false);
-            });
+            }.bind(this));
         },
         _initToolbar: function (toolname) {
             this.epWidget.clearProfile(); //Clear profile
             this.map.graphics.clear();
+            if (this.tb)
+                this.tb.deactivate();
             this.tb = new Draw(this.map);
-            this.tb.on("draw-end", this._addGraphic.bind(this));
-            this.tb.activate(toolname);
+            var toolbar = this.tb;
+            toolbar.on("draw-end", this._addGraphic.bind(this));
+            toolbar.activate(toolname);
             if (toolname === "freehandpolyline") {
                 this.map.disableMapNavigation();
             }
