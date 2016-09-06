@@ -47,7 +47,7 @@ define([
              CartographicLineSymbol,
              Graphic,
              Units,
-             ElevationsProfileWidget,
+             ElevationProfile,
              Color, dom, on) {
     return declare([_Widget, _TemplatedMixin,
         _WidgetsInTemplateMixin], {
@@ -100,7 +100,7 @@ define([
                 scalebarUnits: unit
             };
 
-            this.epWidget = new ElevationsProfileWidget(profileParams, this._profileChartNode);
+            this.epWidget = new ElevationProfile(profileParams, this._profileChartNode);
             this.epWidget.startup();
             on(this.epWidget, "load", function (evt) {
                 this._setProcessing(false);

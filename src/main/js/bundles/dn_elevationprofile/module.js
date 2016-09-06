@@ -17,5 +17,6 @@ define([
     ".",
     "./ElevationProfileWidgetFactory",
     "./ElevationProfileWidget",
+    "./ElevationProfile",
     "ct/tools/Tool"
 ], {});
