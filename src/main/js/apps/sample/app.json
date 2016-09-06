@@ -1,4 +1,7 @@
 {
+  "properties": {
+    "title": "Elevation Profile Sample"
+  },
   "load": {
     "bundleLocations": [
       "localbundles",
@@ -18,19 +21,6 @@
       "parametermanager",
       "dn_elevationprofile"
     ]
-  },
-  "properties": {
-    "id": "elevationprofile_testapp",
-    "title": "Elevation Profile Sample",
-    "description": "",
-    "editorState": "DRAFT",
-    "createdBy": "admin",
-    "createdAt": 1437464629259,
-    "modifiedBy": "admin",
-    "modifiedAt": 1437465397770,
-    "templateFile": "",
-    "templateId": "",
-    "thumbnailFile": ""
   },
   "bundles": {
     "dn_elevationprofile": {
