@@ -1,6 +1,7 @@
 {
   "properties": {
-    "title": "Elevation Profile Sample"
+    "title": "Elevation Profile Sample",
+    "amdPackages": "apprt@^3.2.1"
   },
   "load": {
     "bundleLocations": [
@@ -8,17 +9,17 @@
       "bundles"
     ],
     "allowedBundles": [
-      "themes",
-      "templates",
-      "splashscreen",
-      "system",
-      "templatelayout",
-      "map",
-      "notifier",
-      "toolset",
-      "toolrules",
-      "banner",
-      "parametermanager",
+      "themes@^3.2.1",
+      "templates@^3.2.1",
+      "splashscreen@^3.2.1",
+      "system@^3.2.1",
+      "templatelayout@^3.2.1",
+      "map@^3.2.1",
+      "notifier@^3.2.1",
+      "toolset@^3.2.1",
+      "toolrules@^3.2.1",
+      "banner@^3.2.1",
+      "parametermanager@^3.2.1",
       "dn_elevationprofile"
     ]
   },
