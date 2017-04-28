@@ -19,6 +19,7 @@
       "toolset@^3.2.1",
       "toolrules@^3.2.1",
       "banner@^3.2.1",
+      "custominfo@^3.2.1",
       "parametermanager@^3.2.1",
       "dn_elevationprofile"
     ]
@@ -57,6 +58,36 @@
         "imagePosition": "above",
         "link": "http://developernetwork.conterra.de"
       }
+    },
+    "custominfo": {
+      "CustomInfoToggleTool": [
+        {
+          "id": "customInfoTool",
+          "activateOnStartup": true,
+          "title": "Information",
+          "tooltip": "Information",
+          "iconClass": "icon-custom-info-info",
+          "toolClass": "ctInfo",
+          "togglable": true,
+          "widgetSettings": {
+            "content": "This app shows the functionality of the Elevation Profile bundle which enables the Elevation Profile Widget from Esri (new in ArcGIS API for JavaScript 3.14 ) in map.apps.<br><br> PLease click on the button in the upper left corner. The new window enables you to either draw a polyline or a freehand geometry. It then calculates an elevation profile along this line.",
+            "window": {
+              "title": "Information",
+              "marginBox": {
+                "w": 300,
+                "h": 160,
+                "l": 25,
+                "b": 70
+              },
+              "draggable": true,
+              "closable": true,
+              "modal": false,
+              "maximizable": false,
+              "resizable": false
+            }
+          }
+        }
+      ]
     },
     "themes": {
       "ThemeModel": {
