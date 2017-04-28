@@ -4,7 +4,7 @@
   "Bundle-Name": "${bundleName}",
   "Bundle-Description": "${bundleDescription}",
   "Bundle-Vendor": "con terra GmbH",
-    "Product-Name": "devnet-mapapps-elevation-profile",
+  "Product-Name": "devnet-mapapps-elevation-profile",
   "Config-Bundle-Location": "/config",
   "Require-Bundle": [],
   "CSS-Themes-Extension": [
