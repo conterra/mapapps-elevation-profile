@@ -30,7 +30,32 @@ define({
         meters: "Meters",
         nauticalmiles: "Nautical Miles",
         yards: "Yards",
-        feet: "Feet"
+        feet: "Feet",
+        UNIT_LABEL: {
+            esriMillimeters: "Millimeters",
+            esriCentimeters: "Centimeters",
+            esriDecimeters: "Decimeters",
+            esriMeters: "Meters",
+            esriKilometers: "Kilometers",
+            esriInches: "Inches",
+            esriFeet: "Feet",
+            esriYards: "Yards",
+            esriMiles: "Miles",
+            esriNauticalMiles: "Nautical Miles",
+            esriAcres: "Acres",
+            esriAres: "Ares",
+            esriHectares: "Hectares",
+            esriSquareInches: "Square Inches",
+            esriSquareFeet: "Square Feet",
+            esriSquareYards: "Square Yards",
+            esriSquareMiles: "Square Miles",
+            esriSquareNauticalMiles: "Square Nautical Miles",
+            esriSquareMillimeters: "Square Millimeters",
+            esriSquareCentimeters: "Square Centimeters",
+            esriSquareDecimeters: "Square Decimeters",
+            esriSquareMeters: "Square Meters",
+            esriSquareKilometers: "Square Kilometers"
+        }
     },
     de: true
 });
