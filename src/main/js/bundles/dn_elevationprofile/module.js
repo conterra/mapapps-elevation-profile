@@ -18,5 +18,6 @@ define([
     "./ElevationProfileWidgetFactory",
     "./ElevationProfileWidget",
     "./ElevationProfile",
+    "./UnitsConversion",
     "ct/tools/Tool"
 ], {});
