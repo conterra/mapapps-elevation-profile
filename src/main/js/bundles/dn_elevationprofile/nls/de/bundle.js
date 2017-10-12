@@ -35,7 +35,7 @@ define({
         esriCentimeters: "Zentimeter",
         esriDecimeters: "Dezimeter",
         esriMeters: "Meter",
-        esriKilometers: "Kilometer\u00B2",
+        esriKilometers: "Kilometer",
         esriInches: "Zoll",
         esriFeet: "Fuß",
         esriYards: "Yard",
