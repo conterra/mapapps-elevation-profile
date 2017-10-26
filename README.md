@@ -1,5 +1,7 @@
 # Elevation Profile Bundle
-This bundle enables the Elevation Profile Widget from Esri (new in ArcGIS API for JavaScript 3.14 ) in map.apps. It allows a user to input either a polyline or a freehand geometry and calculates an elevation profile along this line.
+This bundle enables the Elevation Profile Widget from Esri (new in ArcGIS API for JavaScript 3.14 ) in map.apps. It allows a user to input either a polyline or a freehand polyline and calculates an elevation profile along this line.
+
+![alt text](https://github.com/conterra/mapapps-elevation-profile/blob/master/profile.JPG)
 
 Sample App
 ------------------
