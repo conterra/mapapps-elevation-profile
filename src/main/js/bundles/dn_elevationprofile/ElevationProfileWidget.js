@@ -96,6 +96,7 @@ define([
             var profileParams = {
                 map: this.map,
                 profileTaskUrl: props.profileTaskUrl,
+                geometryServiceUrl: props.geometryServiceUrl || "https://utility.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer",
                 chartOptions: props.chartOptions,
                 scalebarUnits: unit
             };
