@@ -95,7 +95,7 @@ define([
                 props = this.properties;
             var profileParams = {
                 map: this.map,
-                profileTaskUrl: props.profileTaskUrl,
+                profileTaskUrl: props.profileTaskUrl || "https://elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer",
                 geometryServiceUrl: props.geometryServiceUrl || "https://utility.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer",
                 chartOptions: props.chartOptions,
                 scalebarUnits: unit
