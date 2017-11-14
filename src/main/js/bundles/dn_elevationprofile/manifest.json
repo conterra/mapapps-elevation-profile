@@ -54,7 +54,7 @@
         "profileTaskUrl": "https://elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer",
         "geometryServiceUrl": "https://utility.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer",
         "chartOptions": {
-          "title": "Elevation Profile",
+          "title": "${windowTitle}",
           "chartTitleFontSize": 14,
           "axisTitleFontSize": 11,
           "axisLabelFontSize": 9,
