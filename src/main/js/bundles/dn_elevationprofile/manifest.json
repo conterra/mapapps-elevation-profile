@@ -88,7 +88,7 @@
       ]
     },
     {
-      "name": "${toolName}",
+      "name": "elevationProfileTool",
       "impl": "ct/tools/Tool",
       "provides": [
         "ct.tools.Tool"
