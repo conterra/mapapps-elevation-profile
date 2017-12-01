@@ -77,6 +77,10 @@ define([
             this.epWidget.clearProfile(); //Clear profile
         },
         _init: function () {
+
+            var unit = this.unit,
+                props = this.properties;
+
             on(this._comboboxNode, "change", function (evt) {
                 var epWidget = this.epWidget;
                 if (epWidget) {
@@ -84,15 +88,16 @@ define([
                 }
             }.bind(this));
 
+            var lineOpts = props.lineOptions ||  {
+                "type" : "esriSLS",
+                "style" : "esriSLSSolid", //"" | esriSLSDashDotDot | esriSLSDot | esriSLSNull | esriSLSSolid
+                "color" : [255, 0, 0],
+                "width" : 2
+            };
+
             // lineSymbol used for freehand polyline and line.
-            this.lineSymbol = this.linesymbol = new CartographicLineSymbol(
-                CartographicLineSymbol.STYLE_SOLID,
-                new Color([255, 0, 0]), 2,
-                CartographicLineSymbol.CAP_ROUND,
-                CartographicLineSymbol.JOIN_MITER, 2
-            );
-            var unit = this.unit,
-                props = this.properties;
+            this.lineSymbol = this.linesymbol = new CartographicLineSymbol(lineOpts);
+
             var profileParams = {
                 map: this.map,
                 profileTaskUrl: props.profileTaskUrl || "https://elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer",
