@@ -64,15 +64,20 @@ define([
         },
         _onPolyline: function () {
             this.type = "polyline";
+            this._freehandPolylineNode.setChecked(false);
             this._initToolbar("polyline");
         },
         _onFreehandPolyline: function () {
-            this.type = "freehandpolyline";
+            this.type = "freehandPolyline";
+            this._polylineNode.setChecked(false);
             this._initToolbar("freehandpolyline");
         },
         _clear: function () {
             var toolbar = this.tb;
             toolbar && toolbar.deactivate();
+            this._polylineNode.setChecked(false);
+            this._freehandPolylineNode.setChecked(false);
+
             this.map.graphics.remove(this.graphic);
             this.epWidget.clearProfile(); //Clear profile
         },
@@ -127,6 +132,11 @@ define([
         },
         _addGraphic: function (evt) {
             this._setProcessing(true);
+
+            // change the toggle state of the button which was pressed
+            var toolButton = ["_",this.type, "Node"].join("");
+            this[toolButton].setChecked(false);
+
             //deactivate the toolbar and clear existing graphics
             this.tb.deactivate();
             this.map.enableMapNavigation();
