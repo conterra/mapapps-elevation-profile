@@ -1,12 +1,12 @@
 <div>
     <div class="digitize">
         <label data-dojo-attach-point="_testNode">${i18n.digitize}</label>
-        <button data-dojo-type="dijit.form.Button" type="button" data-dojo-attach-point="_polylineNode"
+        <button data-dojo-type="dijit.form.ToggleButton" type="button" data-dojo-attach-point="_polylineNode"
                 data-dojo-attach-event="onClick:_onPolyline">
             ${i18n.polyline}
         </button>
-        <button data-dojo-type="dijit.form.Button" type="button" data-dojo-attach-point="_freehandPolylineNode"
-            data-dojo-attach-event="onClick:_onFreehandPolyline">
+        <button data-dojo-type="dijit.form.ToggleButton" type="button"
+            data-dojo-attach-point="_freehandPolylineNode" data-dojo-attach-event="onClick:_onFreehandPolyline">
             ${i18n.freehandpolyline}
         </button>
     </div>

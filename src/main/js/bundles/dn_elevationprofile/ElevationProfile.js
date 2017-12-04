@@ -17,6 +17,9 @@ define(["dojo/_base/lang", "esri/dijit/ElevationProfile", "esri/tasks/GeometrySe
     function (d_lang, ElevationProfile, GeometryService, SpatialReference) {
         d_lang.extend(ElevationProfile, {
             _setProfileGeometryAttr: function (path) {
+
+                this._set("_currentGeometry", path);
+                this._updateProfile(path);
                 var gsUrl = this.geometryServiceUrl || "https://utility.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer";
                 var gsvc = new GeometryService(gsUrl);
                 var outSR = new SpatialReference(3857);
