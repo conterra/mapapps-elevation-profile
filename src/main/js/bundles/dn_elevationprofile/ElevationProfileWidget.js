@@ -86,6 +86,14 @@ define([
             var unit = this.unit,
                 props = this.properties;
 
+            var displayUnits = props.displayUnits || null;
+            if(displayUnits){
+                var invertedOptions = this._comboboxNode.options.filter( function(option){
+                    return displayUnits.indexOf(option.value) === -1;
+                });
+                this._comboboxNode.removeOption(invertedOptions);
+            }
+
             on(this._comboboxNode, "change", function (evt) {
                 var epWidget = this.epWidget;
                 if (epWidget) {
