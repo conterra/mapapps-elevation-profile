@@ -60,6 +60,7 @@
           "axisLabelFontSize": 9,
           "indicatorFontColor": "#eee",
           "indicatorFillColor": "#666",
+          "busyIndicatorBackgroundColor": "#666",
           "titleFontColor": "#eee",
           "axisFontColor": "#ccc",
           "axisMajorTickColor": "#333",
@@ -70,7 +71,19 @@
           "waterBottomColor": "#0000FF",
           "elevationLineColor": "#D2B48C",
           "elevationTopColor": "#8B4513",
-          "elevationBottomColor": "#CD853F"
+          "elevationBottomColor": "#CD853F",
+          "elevationMarkerStrokeColor": "#FF0000",
+          "elevationMarkerSymbol": "m -6 -6, l 12 12, m 0 -12, l -12 12"
+        },
+        "lineOptions": {
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "color": [
+            255,
+            0,
+            0
+          ],
+          "width": 2
         }
       },
       "instanceFactory": true,
