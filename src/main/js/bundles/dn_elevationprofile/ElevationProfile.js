@@ -19,7 +19,12 @@ define(["dojo/_base/lang", "esri/dijit/ElevationProfile", "esri/tasks/GeometrySe
             _setProfileGeometryAttr: function (path) {
 
                 this._set("_currentGeometry", path);
-                this._updateProfile(path);
+
+                // see #9 https://github.com/conterra/mapapps-elevation-profile/issues/9
+
+                if(esri.version >= "3.18"){
+                    this._updateProfile(path);
+                }
                 var gsUrl = this.geometryServiceUrl || "https://utility.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer";
                 var gsvc = new GeometryService(gsUrl);
                 var outSR = new SpatialReference(3857);
