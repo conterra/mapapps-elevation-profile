@@ -27,7 +27,6 @@
   "bundles": {
     "dn_elevationprofile": {
       "ElevationProfileWidgetFactory": {
-        "widgetRole": "elevationProfile",
         "unit": "esriMeters",
         "profileTaskUrl": "https://elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer",
         "geometryServiceUrl": "https://utility.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer",

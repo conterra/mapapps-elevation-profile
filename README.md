@@ -14,6 +14,58 @@ Installation Guide
 - Add the elevation profile service url (https://elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer) to the allowed server urls in your application.properties-file.
 - Add the elevation profile tool to any specified toolset in your app.json-file (id=elevationProfileTool).
 
+#### Configurable Components of dn_vuetoc:
+
+##### ElevationProfileWidgetFactory:
+```
+"ElevationProfileWidgetFactory": {
+    "unit": "esriMeters",
+    "profileTaskUrl": "https://elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer",
+    "geometryServiceUrl": "https://utility.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer",
+    "chartOptions": {
+        "title": "H\u00f6henprofil",
+        "chartTitleFontSize": 12,
+        "axisTitleFontSize": 10,
+        "axisLabelFontSize": 8,
+        "indicatorFontColor": "#eee",
+        "indicatorFillColor": "#666",
+        "busyIndicatorBackgroundColor": "#666",
+        "titleFontColor": "#eee",
+        "axisFontColor": "#ccc",
+        "axisMajorTickColor": "#333",
+        "skyTopColor": "#B0E0E6",
+        "skyBottomColor": "#4682B4",
+        "waterLineColor": "#eee",
+        "waterTopColor": "#ADD8E6",
+        "waterBottomColor": "#0000FF",
+        "elevationLineColor": "#D2B48C",
+        "elevationTopColor": "#8B4513",
+        "elevationBottomColor": "#CD853F",
+        "elevationMarkerStrokeColor": "#FF0000",
+        "elevationMarkerSymbol": "m -6 -6, l 12 12, m 0 -12, l -12 12"
+    },
+    "lineOptions": {
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "color": [
+            255,
+            255,
+            0
+        ],
+        "width": 2
+    }
+}
+```
+
+###### Properties
+| Property                       | Type    | Possible Values                 | Default                                                                                                    | Description                       |
+|--------------------------------|---------|---------------------------------|------------------------------------------------------------------------------------------------------------|---------------------------------- |
+| unit                           | String  |                                 | ```esriMeters```                                                                                           | Show basemaps in vuetoc           |
+| profileTaskUrl                 | String  |                                 | ```https://elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer```                       | Show operational layers in vuetoc |
+| geometryServiceUrl             | String  |                                 | ```https://utility.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer```                        | Show legend in vuetoc             |
+| chartOptions                   | Object  |                                 | [ElevationProfile](https://developers.arcgis.com/javascript/3/jsapi/elevationprofile-amd.html)             | Chart options                     |
+| lineOptions                    | Object  |                                 | [CartographicLineSymbol](https://developers.arcgis.com/javascript/3/jsapi/cartographiclinesymbol-amd.html) | Line options                      |
+
 Development Guide
 ------------------
 ### Define the mapapps remote base
