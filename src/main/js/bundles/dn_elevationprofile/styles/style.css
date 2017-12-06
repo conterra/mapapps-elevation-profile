@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2015 con terra GmbH (info@conterra.de)
+ * Copyright (C) 2017 con terra GmbH (info@conterra.de)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -40,6 +40,19 @@
     overflow: hidden;
 }
 
+.esriElevationProfileDirectionButton:before{
+    font-family: mapappsUiFont;
+    content:'\e61a';
+    transform: rotate(90deg);
+}
+
+.esriElevationProfileDirectionButton:hover:before{
+    transform: rotate(90deg) scaleX(-1);
+}
+
+.esriElevationProfileDirectionButton[style="pointer-events: none;"] {
+    display: none;
+}
 .esriElevationProfileChartNode * {
     color: inherit!important;
 }
@@ -50,3 +63,4 @@
 .spring .esriElevationProfileChartNode svg text{
     fill: #45474d;
 }
+
