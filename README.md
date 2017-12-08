@@ -14,7 +14,7 @@ Installation Guide
 - Add the elevation profile service url (https://elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer) to the allowed server urls in your application.properties-file.
 - Add the elevation profile tool to any specified toolset in your app.json-file (id=elevationProfileTool).
 
-#### Configurable Components of dn_vuetoc:
+#### Configurable Components:
 
 ##### ElevationProfileWidgetFactory:
 ```
@@ -44,6 +44,7 @@ Installation Guide
         "elevationMarkerStrokeColor": "#FF0000",
         "elevationMarkerSymbol": "m -6 -6, l 12 12, m 0 -12, l -12 12"
     },
+    "displayUnits": [ "esriMeters", "esriKilometers" ],
     "lineOptions": {
         "type": "esriSLS",
         "style": "esriSLSSolid",
@@ -60,11 +61,12 @@ Installation Guide
 ###### Properties
 | Property                       | Type    | Possible Values                 | Default                                                                                                    | Description                       |
 |--------------------------------|---------|---------------------------------|------------------------------------------------------------------------------------------------------------|---------------------------------- |
-| unit                           | String  |                                 | ```esriMeters```                                                                                           | Show basemaps in vuetoc           |
-| profileTaskUrl                 | String  |                                 | ```https://elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer```                       | Show operational layers in vuetoc |
-| geometryServiceUrl             | String  |                                 | ```https://utility.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer```                        | Show legend in vuetoc             |
+| unit                           | String  |                                 | ```esriMeters```                                                                                           | Activated unit to start with. Needs to be one of _displayUnits_      |
+| profileTaskUrl                 | String  |                                 | ```https://elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer```                       | URL to Elevation GP Service       |
+| geometryServiceUrl             | String  |                                 | ```https://utility.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer```                        | URL to Geometry Service           |
 | chartOptions                   | Object  |                                 | [ElevationProfile](https://developers.arcgis.com/javascript/3/jsapi/elevationprofile-amd.html)             | Chart options                     |
 | lineOptions                    | Object  |                                 | [CartographicLineSymbol](https://developers.arcgis.com/javascript/3/jsapi/cartographiclinesymbol-amd.html) | Line options                      |
+| displayUnits                   | Array   | ```"esriMiles", "esriKilometers", "esriMeters", "esriNauticalMiles", "esriYards", "esriFeet"```| See _← Possible Values_                           | Limit the unit options            | 
 
 Development Guide
 ------------------
