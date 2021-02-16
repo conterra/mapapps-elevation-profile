@@ -21,7 +21,9 @@ module.exports = {
             title: "Elevation Profile Tool",
             tooltip: "Elevation Profile Tool"
         },
-        ui: {}
+        ui: {
+            windowTitle: "Elevation Profile"
+        }
     },
     de: true
 };

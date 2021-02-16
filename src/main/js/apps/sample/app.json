@@ -15,6 +15,10 @@
             "templatelayout",
             "template-seasons",
             "theme-everlasting",
+            "theme-winter",
+            "theme-spring",
+            "theme-summer",
+            "theme-autumn",
             "map-init",
             "map-preload-2D",
             "map-preload-3D",
@@ -433,6 +437,14 @@
                     },
                     "scale": 140000
                 }
+            }
+        },
+        "themes": {
+            "ThemeModel": {
+                "_selectedTheme": "everlasting"
+            },
+            "ThemeSelector": {
+                "componentEnabled": true
             }
         },
         "templates": {

@@ -24,23 +24,19 @@
         {
             "widgetRole": "elevationProfileWidget",
             "window": {
-                "title": "${windowTitle}",
-                "dockTool": "elevationProfileToggleTool",
+                "title": "${ui.windowTitle}",
                 "closable": true,
                 "minimizeOnClose": true,
-                "resizable": false,
-                "dockable": true,
-                "draggable": false,
+                "maximizable": true,
+                "resizable": true,
+                "draggable": true,
                 "marginBox": {
-                    "l": 0,
-                    "h": 270,
-                    "r": 0,
-                    "b": 33
+                    "l": 20,
+                    "t": 120,
+                    "w": 500,
+                    "h": 286
                 },
-                "fixEdgesInViewPort": {
-                    "t": false
-                },
-                "windowClass": "noTitleBar noPadding"
+                "windowClass": ""
             }
         }
     ],

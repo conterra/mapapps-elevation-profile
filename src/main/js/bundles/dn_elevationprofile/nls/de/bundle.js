@@ -20,5 +20,7 @@ module.exports = {
         title: "H\u00f6henprofil Tool",
         tooltip: "H\u00f6henprofil Tool"
     },
-    ui: {}
+    ui: {
+        windowTitle: "H\u00f6henprofil"
+    }
 };

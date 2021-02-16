@@ -24,9 +24,6 @@ export default class ElevationProfileWidgetController {
 
     activate(componentContext) {
         this.#bundleContext = componentContext.getBundleContext();
-        this._getView().then((view) => {
-
-        });
     }
 
     deactivate() {

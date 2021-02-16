@@ -13,5 +13,80 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-.ctAppRoot {
+.ctAppRoot .elevationProfileWidget .dijitDialogPaneContent {
+    overflow-x: hidden;
+}
+
+.ctAppRoot .elevationProfileWidget .esri-elevation-profile-statistics__statistic-label {
+    font-size: 10px;
+    margin: 0;
+}
+
+.ctAppRoot .elevationProfileWidget .esri-elevation-profile__chart-container {
+    background-color: #fff;
+}
+
+/* everlasting */
+.ctAppRoot.everlasting .elevationProfileWidget .esri-elevation-profile-statistics__statistic-value {
+    color: #f8f8f8;
+}
+
+.ctAppRoot.everlasting .elevationProfileWidget .esri-elevation-profile-statistics__statistic-label {
+    color: #f8f8f8;
+}
+
+.ctAppRoot.everlasting .elevationProfileWidget .esri-elevation-profile-legend__label-content {
+    color: #f8f8f8;
+}
+
+/* autumn */
+.ctAppRoot.autumn .elevationProfileWidget .esri-elevation-profile-statistics__statistic-value {
+    color: #45474d;
+}
+
+.ctAppRoot.autumn .elevationProfileWidget .esri-elevation-profile-statistics__statistic-label {
+    color: #45474d;
+}
+
+.ctAppRoot.autumn .elevationProfileWidget .esri-elevation-profile-legend__label-content {
+    color: #45474d;
+}
+
+/* summer */
+.ctAppRoot.summer .elevationProfileWidget .esri-elevation-profile-statistics__statistic-value {
+    color: #45474d;
+}
+
+.ctAppRoot.summer .elevationProfileWidget .esri-elevation-profile-statistics__statistic-label {
+    color: #45474d;
+}
+
+.ctAppRoot.summer .elevationProfileWidget .esri-elevation-profile-legend__label-content {
+    color: #45474d;
+}
+
+/* spring */
+.ctAppRoot.spring .elevationProfileWidget .esri-elevation-profile-statistics__statistic-value {
+    color: #45474d;
+}
+
+.ctAppRoot.spring .elevationProfileWidget .esri-elevation-profile-statistics__statistic-label {
+    color: #45474d;
+}
+
+.ctAppRoot.spring .elevationProfileWidget .esri-elevation-profile-legend__label-content {
+    color: #45474d;
+}
+
+/* winter */
+.ctAppRoot.winter .elevationProfileWidget .esri-elevation-profile-statistics__statistic-value {
+    color: #45474d;
+}
+
+.ctAppRoot.winter .elevationProfileWidget .esri-elevation-profile-statistics__statistic-label {
+    color: #45474d;
+}
+
+.ctAppRoot.winter .elevationProfileWidget .esri-elevation-profile-legend__label-content {
+    color: #45474d;
 }
