@@ -4,37 +4,6 @@
   "showLabels": true,
   "children": [
     {
-      "type": "textbox",
-      "field": "chartOptions.title",
-      "title": "${chartOptions.title}",
-      "tooltip": "${chartOptions.title}",
-      "required": true
-    },
-    {
-      "type": "numberspinner",
-      "min": 1,
-      "field": "chartOptions.chartTitleFontSize",
-      "title": "${chartOptions.chartTitleFontSize}",
-      "tooltip": "${chartOptions.chartTitleFontSize}",
-      "required": true
-    },
-    {
-      "type": "numberspinner",
-      "min": 1,
-      "field": "chartOptions.axisTitleFontSize",
-      "title": "${chartOptions.axisTitleFontSize}",
-      "tooltip": "${chartOptions.axisTitleFontSize}",
-      "required": true
-    },
-    {
-      "type": "numberspinner",
-      "min": 1,
-      "field": "chartOptions.axisLabelFontSize",
-      "title": "${chartOptions.axisLabelFontSize}",
-      "tooltip": "${chartOptions.axisLabelFontSize}",
-      "required": true
-    },
-    {
       "type": "selectbox",
       "field": "unit",
       "label": "${unit}",
@@ -42,28 +11,32 @@
       "labelAttribute": "${name}",
       "values": [
         {
-          "name": "${miles}",
-          "value": "esriMiles"
+          "name": "${unit.meters}",
+          "value": "meters"
         },
         {
           "name": "${kilometers}",
-          "value": "esriKilometers"
-        },
-        {
-          "name": "${meters}",
-          "value": "esriMeters"
-        },
-        {
-          "name": "${nauticalmiles}",
-          "value": "esriNauticalMiles"
-        },
-        {
-          "name": "${yards}",
-          "value": "esriYards"
+          "value": "kilometers"
         },
         {
           "name": "${feet}",
-          "value": "esriFeet"
+          "value": "feet"
+        },
+        {
+          "name": "${usfeet}",
+          "value": "us-feet"
+        },
+        {
+          "name": "${yards}",
+          "value": "yards"
+        },
+        {
+          "name": "${miles}",
+          "value": "miles"
+        },
+        {
+          "name": "${nauticalmiles}",
+          "value": "nautical-miles"
         }
       ],
       "max": 2,

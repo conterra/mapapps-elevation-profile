@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 con terra GmbH (info@conterra.de)
+ * Copyright (C) 2020 con terra GmbH (info@conterra.de)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,22 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-define({
-    bundleName: "H\u00f6henprofil Konfiguration",
+module.exports = {
+    bundleName: "H\u00f6henprofil",
     bundleDescription: "Konfigurationsbundle f\u00fcr das H\u00f6henprofil",
-    windowTitle: "H\u00f6henprofil Konfiguration",
+    windowTitle: "H\u00f6henprofil",
     description: "Einstellungen f\u00fcr das H\u00f6henprofil",
+    geodesicDistanceThreshold: "",
     unit: "Standard-Einheit:",
-    miles: "Meilen",
-    kilometers: "Kilometer",
-    meters: "Meter",
-    nauticalmiles: "Seemeilen",
-    yards: "Yard",
-    feet: "Fuß",
-    chartOptions: {
-        title: "Titel",
-        chartTitleFontSize: "Titel-Schriftgr\u00f6ße",
-        axisTitleFontSize: "Achsentitle-Schriftgr\u00f6ße",
-        axisLabelFontSize: "Achsenbeschriftung-Schriftgr\u00f6ße"
+    units: {
+        miles: "Meilen",
+        kilometers: "Kilometer",
+        meters: "Meter",
+        nauticalmiles: "Seemeilen",
+        yards: "Yard",
+        feet: "Fuß",
+        usFeet: "US-Fuß"
     }
-});
+}

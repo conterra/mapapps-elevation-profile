@@ -1,120 +1,107 @@
 {
-  "Bundle-SymbolicName": "dn_elevationprofile",
-  "Bundle-Version": "1.2.4-SNAPSHOT",
-  "Bundle-Name": "${bundleName}",
-  "Bundle-Description": "${bundleDescription}",
-  "Bundle-Vendor": "con terra GmbH",
-  "Product-Name": "devnet-mapapps-elevation-profile",
-  "Config-Bundle-Location": "/config",
-  "Require-Bundle": [],
-  "CSS-Themes-Extension": [
-    {
-      "name": "*",
-      "files": [
-        "./styles/style.css"
-      ]
-    }
-  ],
-  "layout-widgets": [
-    {
-      "widgetRole": "elevationProfile",
-      "window": {
-        "windowClass": "noTitleBar",
-        "title": "${windowTitle}",
-        "dockable": true,
-        "dockingBar": "${id}-dockingBarBottomLeft",
-        "dockTool": "elevationProfileTool",
-        "marginBox": {
-          "l": 0,
-          "h": 270,
-          "r": 0,
-          "b": 33
-        },
-        "closable": true,
-        "minimizeOnClose": true,
-        "resizable": false,
-        "draggable": false,
-        "tools": [],
-        "fixEdgesInViewPort": {
-          "t": false
-        }
-      }
-    }
-  ],
-  "Components": [
-    {
-      "name": "ElevationProfileWidgetFactory",
-      "provides": [
-        "dijit.Widget",
-        "ct.framework.api.EventHandler"
-      ],
-      "properties": {
-        "widgetRole": "elevationProfile",
-        "unit": "esriMeters",
-        "profileTaskUrl": "https://elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer",
-        "geometryServiceUrl": "https://utility.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer",
-        "chartOptions": {
-          "title": "${windowTitle}",
-          "chartTitleFontSize": 14,
-          "axisTitleFontSize": 11,
-          "axisLabelFontSize": 9,
-          "indicatorFontColor": "#eee",
-          "indicatorFillColor": "#666",
-          "busyIndicatorBackgroundColor": "#666",
-          "titleFontColor": "#eee",
-          "axisFontColor": "#ccc",
-          "axisMajorTickColor": "#333",
-          "skyTopColor": "#B0E0E6",
-          "skyBottomColor": "#4682B4",
-          "waterLineColor": "#eee",
-          "waterTopColor": "#ADD8E6",
-          "waterBottomColor": "#0000FF",
-          "elevationLineColor": "#D2B48C",
-          "elevationTopColor": "#8B4513",
-          "elevationBottomColor": "#CD853F",
-          "elevationMarkerStrokeColor": "#FF0000",
-          "elevationMarkerSymbol": "m -6 -6, l 12 12, m 0 -12, l -12 12"
-        },
-        "lineOptions": {
-          "type": "esriSLS",
-          "style": "esriSLSSolid",
-          "color": [
-            255,
-            0,
-            0
-          ],
-          "width": 2
-        }
-      },
-      "instanceFactory": true,
-      "immediate": true,
-      "references": [
-        {
-          "name": "_esriMap",
-          "providing": "esri.Map"
-        },
-        {
-          "name": "_tool",
-          "providing": "ct.tools.Tool",
-          "filter": "(id=elevationProfileTool)"
-        }
-      ]
+    "name": "dn_elevationprofile",
+    "version": "2.0.0-SNAPSHOT",
+    "title": "${bundleName}",
+    "description": "${bundleDescription}",
+    "vendor": "con terra GmbH",
+    "productName": "devnet-mapapps-elevation-profile",
+    "configBundleLocation": "/config",
+    "dependencies": {
+        "esri": "^4.12.0",
+        "esri-widgets": "^4.8.0",
+        "map-widget": "^4.8.0",
+        "apprt-binding": "^4.8.0"
     },
-    {
-      "name": "ElevationProfileTool",
-      "impl": "ct/tools/Tool",
-      "provides": [
-        "ct.tools.Tool"
-      ],
-      "propertiesConstructor": true,
-      "properties": {
-        "id": "elevationProfileTool",
-        "toolRole": "toolset",
-        "title": "${toolName}",
-        "tooltip": "${toolTooltip}",
-        "togglable": true,
-        "iconClass": "icon-chart-line"
-      }
-    }
-  ]
+    "CSS-Themes-Extension": [
+        {
+            "name": "*",
+            "files": [
+                "./css/styles.css"
+            ]
+        }
+    ],
+    "layout-widgets": [
+        {
+            "widgetRole": "elevationProfileWidget",
+            "window": {
+                "title": "${windowTitle}",
+                "dockTool": "elevationProfileToggleTool",
+                "closable": true,
+                "minimizeOnClose": true,
+                "resizable": false,
+                "dockable": true,
+                "draggable": false,
+                "marginBox": {
+                    "l": 0,
+                    "h": 270,
+                    "r": 0,
+                    "b": 33
+                },
+                "fixEdgesInViewPort": {
+                    "t": false
+                },
+                "windowClass": "noTitleBar noPadding"
+            }
+        }
+    ],
+    "components": [
+        {
+            "name": "Config",
+            "impl": "./ElevationProfileWidgetController",
+            "provides": [
+                "dn_elevationprofile.ElevationProfileWidgetController"
+            ],
+            "properties": {
+                "geodesicDistanceThreshold": 100000,
+                "profiles": [
+                    {
+                        "type": "ground"
+                    }
+                ],
+                "unit": "meters",
+                "unitOptions": [
+                    "meters",
+                    "kilometers",
+                    "feet"
+                ],
+                "visibleElements": {
+                    "statistics": true,
+                    "legend": true,
+                    "sketchButton": true,
+                    "selectButton": true
+                }
+            },
+            "references": [
+                {
+                    "name": "_mapWidgetModel",
+                    "providing": "map-widget.MapWidgetModel"
+                }
+            ]
+        },
+        {
+            "name": "ElevationProfileToggleTool",
+            "impl": "ct/tools/Tool",
+            "provides": [
+                "ct.tools.Tool"
+            ],
+            "propertiesConstructor": true,
+            "properties": {
+                "id": "elevationProfileToggleTool",
+                "title": "${tool.title}",
+                "tooltip": "${tool.tooltip}",
+                "iconClass": "icon-chart-line",
+                "activateHandler": "onToolActivated",
+                "deactivateHandler": "onToolDeactivated",
+                "toolRole": "toolset",
+                "togglable": true,
+                "noGroup": true
+            },
+            "references": [
+                {
+                    "name": "handlerScope",
+                    "providing": "dn_elevationprofile.ElevationProfileWidgetController"
+                }
+            ]
+        }
+    ]
 }

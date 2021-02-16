@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 con terra GmbH (info@conterra.de)
+ * Copyright (C) 2020 con terra GmbH (info@conterra.de)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,25 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-define({
+module.exports = {
     root: {
-        bundleName: "Elevation Profile Config",
+        bundleName: "Elevation Profile",
         bundleDescription: "Configuration Bundle for the Elevation Profile",
-        windowTitle: "Elevation Profile Config",
+        windowTitle: "Elevation Profile",
         description: "Settings for the Elevation Profile",
         unit: "Default-Unit:",
-        miles: "Miles",
-        kilometers: "Kilometers",
-        meters: "Meters",
-        nauticalmiles: "Nautical Miles",
-        yards: "Yards",
-        feet: "Feet",
-        chartOptions: {
-            title: "Title",
-            chartTitleFontSize: "Title Font Size",
-            axisTitleFontSize: "Axis Title Font Size",
-            axisLabelFontSize: "Axis Label Font size"
+        units: {
+            miles: "Miles",
+            kilometers: "Kilometers",
+            meters: "Meters",
+            nauticalmiles: "Nautical Miles",
+            yards: "Yards",
+            feet: "Feet",
+            usFeet: "US-Feet"
         }
     },
     de: true
-});
+}

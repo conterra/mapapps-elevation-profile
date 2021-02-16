@@ -1,24 +1,25 @@
 {
-    "Bundle-SymbolicName": "dn_elevationprofile-config",
-    "Bundle-Version": "1.2.4-SNAPSHOT",
-    "Bundle-Name": "${bundleName}",
-    "Bundle-Description": "Configuration Bundle for Elevation Profile",
-    "Bundle-Vendor": "con terra GmbH",
-    "Require-Bundle": [
-        {
-            "name": "dataform",
-            "version": "^3.2.1"
-        },
-        {
-            "name": "wizard",
-            "version": "^3.2.1"
-        }
+    "name": "dn_elevationprofile-config",
+    "version": "2.0.0-SNAPSHOT",
+    "title": "${bundleName}",
+    "description": "${bundleDescription}",
+    "vendor": "con terra GmbH",
+    "layer": "module",
+    "productName": "devnet-mapapps-elevation-profile",
+    "i18n": [
+        "bundle"
     ],
-    "Components": [
+    "dependencies": {
+        "dataform": "^4.2.0",
+        "wizard": "^4.2.0"
+    },
+    "components": [
         {
             "name": "BuilderEntry",
             "impl": "ct/Stateful",
-            "provides": ["wizard.MenuEntry"],
+            "provides": [
+                "wizard.MenuEntry"
+            ],
             "propertiesConstructor": true,
             "properties": {
                 "parentNodeId": "appBuilderToolsNode",
@@ -33,35 +34,34 @@
         {
             "name": "BuilderWidget",
             "impl": "wizard/DataFormBuilderWidgetFactory",
-            "provides": ["dijit.wizard.Widget"],
+            "provides": [
+                "dijit.wizard.Widget"
+            ],
             "immediate": true,
             "instanceFactory": true,
             "properties": {
                 "dataformFile": "resource('./DataForm.json')",
                 "bid": "dn_elevationprofile",
-                "pid": "dn_elevationprofile-ElevationProfileWidgetFactory",
+                "pid": "dn_elevationprofile-Config",
                 "id": "elevationProfileBuilderWidget",
                 "defaultProperties": {
-                    "unit": "esriMeters",
-                    "profileTaskUrl": "https://elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer",
-                    "chartOptions": {
-                        "title": "Elevation Profile",
-                        "chartTitleFontSize": 14,
-                        "axisTitleFontSize": 11,
-                        "axisLabelFontSize": 9,
-                        "indicatorFontColor": "#eee",
-                        "indicatorFillColor": "#666",
-                        "titleFontColor": "#eee",
-                        "axisFontColor": "#ccc",
-                        "axisMajorTickColor": "#333",
-                        "skyTopColor": "#B0E0E6",
-                        "skyBottomColor": "#4682B4",
-                        "waterLineColor": "#eee",
-                        "waterTopColor": "#ADD8E6",
-                        "waterBottomColor": "#0000FF",
-                        "elevationLineColor": "#D2B48C",
-                        "elevationTopColor": "#8B4513",
-                        "elevationBottomColor": "#CD853F"
+                    "geodesicDistanceThreshold": 100000,
+                    "profiles": [
+                        {
+                            "type": "ground"
+                        }
+                    ],
+                    "unit": "meters",
+                    "unitOptions": [
+                        "meters",
+                        "kilometers",
+                        "feet"
+                    ],
+                    "visibleElements": {
+                        "statistics": true,
+                        "legend": true,
+                        "sketchButton": true,
+                        "selectButton": true
                     }
                 },
                 "description": "${description}"
