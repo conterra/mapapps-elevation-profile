@@ -13,17 +13,72 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 .ctAppRoot .elevationProfileWidget .dijitDialogPaneContent {
     overflow-x: hidden;
 }
 
+.ctAppRoot .elevationProfileWidget .esri-elevation-profile {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.ctAppRoot .elevationProfileWidget .esri-elevation-profile__header {
+    flex: 0 0 auto;
+    align-items: start;
+    height: 54px;
+    margin: 0;
+}
+
+.ctAppRoot .esri-popover .esri-elevation-profile-settings__select {
+    color: #323232;
+}
+
+.ctAppRoot .elevationProfileWidget .esri-elevation-profile-statistics {
+    height: 100%;
+    align-items: start;
+}
+
+.ctAppRoot .elevationProfileWidget .esri-elevation-profile__prompt-container {
+    flex: 1 1 auto;
+    overflow: auto;
+}
+
+.ctAppRoot .elevationProfileWidget .esri-elevation-profile__footer {
+    flex: 0 0 auto;
+}
+
 .ctAppRoot .elevationProfileWidget .esri-elevation-profile-statistics__statistic-label {
-    font-size: 10px;
+    font-size: 12px;
+    margin: 0;
+}
+
+.ctAppRoot .elevationProfileWidget .esri-elevation-profile-statistics__statistic-value {
+    font-size: 12px;
     margin: 0;
 }
 
 .ctAppRoot .elevationProfileWidget .esri-elevation-profile__chart-container {
     background-color: #fff;
+    padding: 8px;
+}
+
+.ctAppRoot .elevationProfileWidget .esri-elevation-profile-settings {
+    margin-right: 0;
+}
+
+.ctAppRoot .elevationProfileWidget .esri-button {
+    color: #fff;
+    border-radius: 4px;
+    transition: background .3s ease-out,box-shadow .3s ease-out;
+    box-shadow: rgb(0 0 0 / 12%) 0 1px 6px, rgb(0 0 0 / 12%) 0 1px 4px;
+    background-color: #2a2a2a;
+}
+
+.ctAppRoot .elevationProfileWidget .esri-button:hover {
+    background-color: #43b8f6;
+    box-shadow: rgb(0 0 0 / 16%) 0 3px 10px, rgb(0 0 0 / 22%) 0 3px 10px;;
 }
 
 /* everlasting */
@@ -39,6 +94,22 @@
     color: #f8f8f8;
 }
 
+.ctAppRoot.everlasting .elevationProfileWidget .esri-button {
+    background-color: #12a5f4;
+}
+
+.ctAppRoot.everlasting .elevationProfileWidget .esri-button:hover {
+    background-color: #43b8f6;
+}
+
+.ctAppRoot.everlasting .elevationProfileWidget .esri-button.esri-button--secondary {
+    background-color: #2a2a2a;
+}
+
+.ctAppRoot.everlasting .elevationProfileWidget .esri-button.esri-button--secondary:hover {
+    background-color: #43b8f6;
+}
+
 /* autumn */
 .ctAppRoot.autumn .elevationProfileWidget .esri-elevation-profile-statistics__statistic-value {
     color: #45474d;
@@ -50,6 +121,22 @@
 
 .ctAppRoot.autumn .elevationProfileWidget .esri-elevation-profile-legend__label-content {
     color: #45474d;
+}
+
+.ctAppRoot.autumn .elevationProfileWidget .esri-button {
+    background-color: #2980b9;
+}
+
+.ctAppRoot.autumn .elevationProfileWidget .esri-button:hover {
+    background-color: #409ad5;
+}
+
+.ctAppRoot.autumn .elevationProfileWidget .esri-button.esri-button--secondary {
+    background-color: #2a2a2a;
+}
+
+.ctAppRoot.autumn .elevationProfileWidget .esri-button.esri-button--secondary:hover {
+    background-color: #409ad5;
 }
 
 /* summer */
@@ -65,6 +152,22 @@
     color: #45474d;
 }
 
+.ctAppRoot.summer .elevationProfileWidget .esri-button {
+    background-color: #8c0f1a;
+}
+
+.ctAppRoot.summer .elevationProfileWidget .esri-button:hover {
+    background-color: #ba1423;
+}
+
+.ctAppRoot.summer .elevationProfileWidget .esri-button.esri-button--secondary {
+    background-color: #2a2a2a;
+}
+
+.ctAppRoot.summer .elevationProfileWidget .esri-button.esri-button--secondary:hover {
+    background-color: #ba1423;
+}
+
 /* spring */
 .ctAppRoot.spring .elevationProfileWidget .esri-elevation-profile-statistics__statistic-value {
     color: #45474d;
@@ -78,6 +181,22 @@
     color: #45474d;
 }
 
+.ctAppRoot.spring .elevationProfileWidget .esri-button {
+    background-color: #16a085;
+}
+
+.ctAppRoot.spring .elevationProfileWidget .esri-button:hover {
+    background-color: #1ccdaa;
+}
+
+.ctAppRoot.spring .elevationProfileWidget .esri-button.esri-button--secondary {
+    background-color: #2a2a2a;
+}
+
+.ctAppRoot.spring .elevationProfileWidget .esri-button.esri-button--secondary:hover {
+    background-color: #1ccdaa;
+}
+
 /* winter */
 .ctAppRoot.winter .elevationProfileWidget .esri-elevation-profile-statistics__statistic-value {
     color: #45474d;
@@ -89,4 +208,20 @@
 
 .ctAppRoot.winter .elevationProfileWidget .esri-elevation-profile-legend__label-content {
     color: #45474d;
+}
+
+.ctAppRoot.winter .elevationProfileWidget .esri-button {
+    background-color: #3c3c3c;
+}
+
+.ctAppRoot.winter .elevationProfileWidget .esri-button:hover {
+    background-color: #565656;
+}
+
+.ctAppRoot.winter .elevationProfileWidget .esri-button.esri-button--secondary {
+    background-color: #2a2a2a;
+}
+
+.ctAppRoot.winter .elevationProfileWidget .esri-button.esri-button--secondary:hover {
+    background-color: #565656;
 }
