@@ -18,8 +18,8 @@ module.exports = {
         bundleName: "Elevation Profile",
         bundleDescription: "This bundle can create an elevation profile",
         tool: {
-            title: "Elevation Profile Tool",
-            tooltip: "Elevation Profile Tool"
+            title: "Create Elevation Profile",
+            tooltip: "Create Elevation Profile"
         },
         ui: {
             windowTitle: "Elevation Profile"

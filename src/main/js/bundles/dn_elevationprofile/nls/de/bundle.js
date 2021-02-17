@@ -17,8 +17,8 @@ module.exports = {
     bundleName: "H\u00f6henprofil",
     bundleDescription: "Dieses Bundle erm\u00f6glicht es H\u00f6henprofile zu zeichnen",
     tool: {
-        title: "H\u00f6henprofil Tool",
-        tooltip: "H\u00f6henprofil Tool"
+        title: "H\u00f6henprofil erstellen",
+        tooltip: "H\u00f6henprofil erstellen"
     },
     ui: {
         windowTitle: "H\u00f6henprofil"
