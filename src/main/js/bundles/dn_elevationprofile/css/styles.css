@@ -19,16 +19,31 @@
 }
 
 .ctAppRoot .elevationProfileWidget .esri-elevation-profile {
-    display: flex;
+    display       : flex;
     flex-direction: column;
-    height: 100%;
+    height        : 100%;
 }
 
 .ctAppRoot .elevationProfileWidget .esri-elevation-profile__header {
-    flex: 0 0 auto;
+    flex       : 0 0 auto;
     align-items: start;
-    height: 54px;
-    margin: 0;
+    height     : 54px;
+    margin     : 0;
+}
+
+.ctAppRoot .elevationProfileWidget .esri-elevation-profile-legend__checkbox {
+    height      : 20px;
+    width       : 20px;
+    background  : #28ae6d;
+    border-color: #28ae6d;
+}
+
+.ctAppRoot .elevationProfileWidget .esri-elevation-profile-legend__color-indicator {
+    width: 20px;
+}
+
+.ctAppRoot .elevationProfileWidget .esri-elevation-profile-legend__label-content {
+    font-size: 16px;
 }
 
 .ctAppRoot .esri-popover .esri-elevation-profile-settings__select {
@@ -36,12 +51,12 @@
 }
 
 .ctAppRoot .elevationProfileWidget .esri-elevation-profile-statistics {
-    height: 100%;
+    height     : 100%;
     align-items: start;
 }
 
 .ctAppRoot .elevationProfileWidget .esri-elevation-profile__prompt-container {
-    flex: 1 1 auto;
+    flex    : 1 1 auto;
     overflow: auto;
 }
 
@@ -51,17 +66,17 @@
 
 .ctAppRoot .elevationProfileWidget .esri-elevation-profile-statistics__statistic-label {
     font-size: 12px;
-    margin: 0;
+    margin   : 0;
 }
 
 .ctAppRoot .elevationProfileWidget .esri-elevation-profile-statistics__statistic-value {
     font-size: 12px;
-    margin: 0;
+    margin   : 0;
 }
 
 .ctAppRoot .elevationProfileWidget .esri-elevation-profile__chart-container {
     background-color: #fff;
-    padding: 8px;
+    padding         : 8px;
 }
 
 .ctAppRoot .elevationProfileWidget .esri-elevation-profile-settings {
@@ -69,16 +84,17 @@
 }
 
 .ctAppRoot .elevationProfileWidget .esri-button {
-    color: #fff;
-    border-radius: 4px;
-    transition: background .3s ease-out,box-shadow .3s ease-out;
-    box-shadow: rgb(0 0 0 / 12%) 0 1px 6px, rgb(0 0 0 / 12%) 0 1px 4px;
+    color           : #fff;
+    border-radius   : 4px;
+    transition      : background .3s ease-out, box-shadow .3s ease-out;
+    box-shadow      : rgb(0 0 0 / 12%) 0 1px 6px, rgb(0 0 0 / 12%) 0 1px 4px;
     background-color: #2a2a2a;
 }
 
 .ctAppRoot .elevationProfileWidget .esri-button:hover {
     background-color: #43b8f6;
-    box-shadow: rgb(0 0 0 / 16%) 0 3px 10px, rgb(0 0 0 / 22%) 0 3px 10px;;
+    box-shadow      : rgb(0 0 0 / 16%) 0 3px 10px, rgb(0 0 0 / 22%) 0 3px 10px;
+    ;
 }
 
 /* everlasting */
