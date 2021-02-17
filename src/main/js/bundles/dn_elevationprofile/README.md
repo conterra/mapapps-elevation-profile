@@ -13,6 +13,10 @@ To make the functions of this bundle available to the user, the following tool c
 
 ## Configuration Reference
 
+More information about the configuration can be found in the Esri documentation:
+
+https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ElevationProfile.html
+
 ```json
 "dn_elevationprofile": {
     "Config": {
