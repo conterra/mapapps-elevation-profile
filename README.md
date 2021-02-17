@@ -10,8 +10,6 @@ https://demos.conterra.de/mapapps/resources/apps/downloads_elevationprofile4/ind
 **Requirements:**
 - map.apps 4.11.0 or later
 
-Simply add the bundle "dn_elevationprofile" to your app.
-
 [dn_elevationprofile Documentation](https://github.com/conterra/mapapps-elevation-profile/tree/master/src/main/js/bundles/dn_elevationprofile)
 
 ## Development Guide
