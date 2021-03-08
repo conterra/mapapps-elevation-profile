@@ -62,6 +62,10 @@ export default class ElevationProfileWidgetController {
     }
 
     _hideWindow() {
+        this.#elevationProfileWidget?.viewModel?.clear();
+        this.#elevationProfileWidget?.destroy();
+        this.#elevationProfileWidget = null;
+
         const registration = this.#serviceRegistration;
 
         // clear the reference
