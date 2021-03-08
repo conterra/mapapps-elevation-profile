@@ -15,12 +15,15 @@
  */
 import ElevationProfile from "esri/widgets/ElevationProfile";
 import EsriDijit from "esri-widgets/EsriDijit";
+import ct_util from "ct/ui/desktop/util";
+import async from "apprt-core/async";
 
 export default class ElevationProfileWidgetController {
 
     #elevationProfileWidget = null;
     #serviceRegistration = null;
     #bundleContext = null;
+    #tool = null;
 
     activate(componentContext) {
         this.#bundleContext = componentContext.getBundleContext();
@@ -30,7 +33,8 @@ export default class ElevationProfileWidgetController {
         this._destroyWidget();
     }
 
-    onToolActivated() {
+    onToolActivated(evt) {
+        this.#tool = evt.tool;
         this._getView().then((view) => {
             const widget = this.getWidget(view);
             this._showWindow(widget);
@@ -48,6 +52,13 @@ export default class ElevationProfileWidgetController {
         const interfaces = ["dijit.Widget"];
         const content = new EsriDijit(widget);
         this.#serviceRegistration = this.#bundleContext.registerService(interfaces, content, serviceProperties);
+
+        async(() => {
+            const window = ct_util.findEnclosingWindow(content);
+            window.on("Hide", () => {
+                this._hideWindow();
+            });
+        }, 1000);
     }
 
     _hideWindow() {
@@ -59,6 +70,9 @@ export default class ElevationProfileWidgetController {
         if (registration) {
             // call unregister
             registration.unregister();
+        }
+        if (this.#tool) {
+            this.#tool.set("active", false);
         }
     }
 
