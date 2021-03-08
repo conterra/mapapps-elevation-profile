@@ -51,10 +51,10 @@ export default class ElevationProfileWidgetController {
     }
 
     _hideWindow() {
-        const registration = this._serviceregistration;
+        const registration = this.#serviceRegistration;
 
         // clear the reference
-        this._serviceregistration = null;
+        this.#serviceRegistration = null;
 
         if (registration) {
             // call unregister
