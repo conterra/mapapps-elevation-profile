@@ -37,6 +37,11 @@ export default class ElevationProfileWidgetController {
         this.#tool = evt.tool;
         this._getView().then((view) => {
             const widget = this.getWidget(view);
+            widget.own({
+                remove() {
+                    widget.destroy();
+                }
+            });
             this._showWindow(widget);
         });
     }
@@ -97,7 +102,7 @@ export default class ElevationProfileWidgetController {
 
     _getView() {
         const mapWidgetModel = this._mapWidgetModel;
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             if (mapWidgetModel.view) {
                 resolve(mapWidgetModel.view);
             } else {
