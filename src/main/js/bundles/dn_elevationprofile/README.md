@@ -38,7 +38,7 @@ https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Eleva
             "clearButton": true,
             "settingsButton": true,
             "sketchButton": true,
-            "selectButton": true,
+            "selectButton": false,
             "uniformChartScalingToggle": true
         }
     }

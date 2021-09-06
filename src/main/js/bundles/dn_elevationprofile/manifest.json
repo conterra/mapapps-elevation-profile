@@ -94,7 +94,7 @@
                     "clearButton": true,
                     "settingsButton": true,
                     "sketchButton": true,
-                    "selectButton": true,
+                    "selectButton": false,
                     "uniformChartScalingToggle": true
                 }
             },
