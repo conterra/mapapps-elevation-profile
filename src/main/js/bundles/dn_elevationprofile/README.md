@@ -33,10 +33,13 @@ https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Eleva
             "feet"
         ],
         "visibleElements": {
-            "statistics": true,
             "legend": true,
+            "chart": true,
+            "clearButton": true,
+            "settingsButton": true,
             "sketchButton": true,
-            "selectButton": true
+            "selectButton": true,
+            "uniformChartScalingToggle": true
         }
     }
 }
