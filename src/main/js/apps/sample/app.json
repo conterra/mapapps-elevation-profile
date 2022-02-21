@@ -95,7 +95,7 @@
                         "id": "esri_street",
                         "title": "Straßenkarte (grau)",
                         "thumbnailUrl": "resource('${app}:/images/streets.png')",
-                        "basemap": "gray"
+                        "basemap": "gray-vector"
                     },
                     {
                         "id": "esri_hybrid",
@@ -108,7 +108,7 @@
                         "title": "Topographische Karte",
                         "thumbnailUrl": "resource('${app}:/images/topo.png')",
                         "selected": true,
-                        "basemap": "topo"
+                        "basemap": "topo-vector"
                     }
                 ],
                 "map": {
