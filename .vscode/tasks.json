@@ -3,7 +3,8 @@
     "tasks": [
         {
             "label": "Initialize",
-                        "type": "shell",
+            "detail": "Initialize map.apps for Developers project",
+            "type": "shell",
             "command": "mvn initialize",
             "group": "build"
         },
