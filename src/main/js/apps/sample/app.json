@@ -113,8 +113,8 @@
                 "map": {
                     "layers": [
                         {
-                            "id": "zuerich",
-                            "url": "https://tiles.arcgis.com/tiles/oPre3pOfRfefL8y0/arcgis/rest/services/LOD2_GEBAEUDE_ZRH/SceneServer",
+                            "id": "newyork",
+                            "url": "https://tiles.arcgis.com/tiles/z2tnIkrLQ2BRzr6P/arcgis/rest/services/New_York_LoD2_3D_Buildings/SceneServer",
                             "type": "AGS_SCENE",
                             "renderer": {
                                 "type": "simple",
@@ -148,16 +148,9 @@
                 "view": {
                     "viewmode": "3D",
                     "camera": {
-                        "heading": 338.4613139877434,
-                        "tilt": 65.6626297158947,
-                        "position": {
-                            "x": 951163.1908125386,
-                            "y": 6002664.875400205,
-                            "z": 793.7736872918904,
-                            "spatialReference": {
-                                "wkid": 102100
-                            }
-                        }
+                        "heading": 50,
+                        "tilt": 81,
+                        "position": [-74.0338, 40.6913, 707]
                     }
                 }
             }
