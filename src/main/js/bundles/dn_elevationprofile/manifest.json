@@ -75,6 +75,7 @@
                 "dn_elevationprofile.ElevationProfileWidgetController"
             ],
             "properties": {
+                "startSketchOnOpen": false,
                 "geodesicDistanceThreshold": 100000,
                 "profiles": [
                     {

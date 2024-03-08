@@ -20,6 +20,7 @@ https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Eleva
 ```json
 "dn_elevationprofile": {
     "Config": {
+        "startSketchOnOpen": false,
         "geodesicDistanceThreshold": 100000,
         "profiles": [
             {
@@ -44,3 +45,6 @@ https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Eleva
     }
 }
 ```
+| Property          | Type    | Possible Values               | Default     | Description                                                                |
+|-------------------|---------|-------------------------------|-------------|----------------------------------------------------------------------------|
+| startSketchOnOpen | Boolean | ```true``` &#124; ```false``` | ```false``` | Determines whether a profile line sketch is started on opening the widget. |
