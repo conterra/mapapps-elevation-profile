@@ -51,12 +51,28 @@ export default class ElevationProfileWidgetController {
     }
 
     _showWindow(widget) {
+        const props = this._properties;
+        const elevationProfileViewModel = this.#elevationProfileWidget.viewModel;
         const serviceProperties = {
             "widgetRole": "elevationProfileWidget"
         };
         const interfaces = ["dijit.Widget"];
         const content = new EsriDijit(widget);
         this.#serviceRegistration = this.#bundleContext.registerService(interfaces, content, serviceProperties);
+
+        if (props.startSketchOnOpen) {
+            let stateWatcher = this.stateWatcher = elevationProfileViewModel.watch("state", state => {
+                if (state === "ready") {
+                    stateWatcher.remove();
+                    stateWatcher = undefined;
+                    elevationProfileViewModel.start();
+                }
+            });
+
+            if (elevationProfileViewModel.state === "ready") {
+                elevationProfileViewModel.start();
+            }
+        }
 
         async(() => {
             const window = ct_util.findEnclosingWindow(content);
@@ -82,6 +98,11 @@ export default class ElevationProfileWidgetController {
         }
         if (this.#tool) {
             this.#tool.set("active", false);
+        }
+
+        if (this.stateWatcher) {
+            this.stateWatcher.remove();
+            this.stateWatcher = undefined;
         }
     }
 
