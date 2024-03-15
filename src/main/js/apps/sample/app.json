@@ -42,7 +42,7 @@
     "bundles": {
         "dn_elevationprofile": {
             "Config": {
-                "startSketchOnOpen": true,
+                "startSketchOnOpen": false,
                 "label": "Peter",
                 "geodesicDistanceThreshold": 100000,
                 "profiles": [
