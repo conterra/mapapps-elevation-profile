@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 import ElevationProfile from "esri/widgets/ElevationProfile";
+import ElevationLayer from "esri/layers/ElevationLayer";
 import EsriDijit from "esri-widgets/EsriDijit";
 import ct_util from "ct/ui/desktop/util";
 import async from "apprt-core/async";
@@ -108,6 +109,14 @@ export default class ElevationProfileWidgetController {
 
     getWidget(view) {
         const elevationProfileProperties = this.getElevationProfileProperties(view);
+        let layer = new ElevationLayer({
+            url: "//elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer"
+        });
+        elevationProfileProperties.profiles.push({
+            type: "query",
+            source: layer
+        });
+
         return this.#elevationProfileWidget = new ElevationProfile(elevationProfileProperties);
     }
 
