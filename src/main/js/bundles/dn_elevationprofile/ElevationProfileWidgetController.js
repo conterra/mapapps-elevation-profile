@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import ElevationProfile from "esri/widgets/ElevationProfile";
+import ElevationProfile from "@arcgis/core/widgets/ElevationProfile";
 import EsriDijit from "esri-widgets/EsriDijit";
 import ct_util from "ct/ui/desktop/util";
 import async from "apprt-core/async";
@@ -37,7 +37,7 @@ export default class ElevationProfileWidgetController {
         this.#tool = evt.tool;
         this._getView().then((view) => {
             const widget = this.getWidget(view);
-            widget.own({
+            widget.addHandles({
                 remove() {
                     widget.destroy();
                 }
