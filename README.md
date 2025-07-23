@@ -4,7 +4,7 @@ This bundle enables the ElevationProfile Widget from Esri (new in ArcGIS API for
 ![Screenshot App](https://github.com/conterra/mapapps-elevation-profile/blob/main/screenshot.JPG)
 
 ## Sample App
-https://demos.conterra.de/mapapps/resources/apps/downloads_elevationprofile4/index.html
+https://demos.conterra.de/mapapps/resources/apps/public_demo_elevationprofile/index.html
 
 ## Installation Guide
 **Requirements:**
