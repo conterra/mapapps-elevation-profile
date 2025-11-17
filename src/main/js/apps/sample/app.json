@@ -34,7 +34,7 @@
             "theme-autumn",
             "toc",
             "toolset",
-            "dn_elevationprofile",
+            "dn_elevationprofile", 
             "dn_imprintprivacy"
         ],
         "i18n": [
@@ -466,11 +466,18 @@
                     "ground": "world-elevation"
                 },
                 "view": {
-                   "viewmode": "3D",
+                    "viewmode": "3D",
                     "camera": {
                         "heading": 50,
                         "tilt": 81,
-                        "position": [-74.0338, 40.6913, 707]
+                        "position": {
+                            "x": -74.0338,
+                            "y": 40.6913,
+                            "z": 700,
+                            "spatialReference": {
+                                "wkid": 4326
+                            }
+                        }
                     }
                 }
             }
