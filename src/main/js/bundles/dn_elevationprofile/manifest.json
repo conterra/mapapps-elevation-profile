@@ -6,11 +6,11 @@
     "vendor": "con terra GmbH",
     "productName": "devnet-mapapps-elevation-profile",
     "dependencies": {
-        "esri": "^4.18.0",
-        "esri-widgets": "^4.11.0",
-        "map-widget": "^4.11.0"
+        "@arcgis/core": "^4.33.0",
+        "esri-widgets": "^4.20.0",
+        "map-widget": "^4.20.0"
     },
-    "CSS-Themes-Extension": [
+    "cssThemesExtension": [
         {
             "name": "*",
             "files": [
