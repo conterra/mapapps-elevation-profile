@@ -1,3 +1,7 @@
+[![devnet-bundle-snapshot](https://github.com/conterra/mapapps-elevation-profile/actions/workflows/devnet-bundle-snapshot.yml/badge.svg)](https://github.com/conterra/mapapps-elevation-profile/actions/workflows/devnet-bundle-snapshot.yml)
+![Static Badge](https://img.shields.io/badge/requires_map.apps-4.20.0-e5e5e5?labelColor=%233E464F&logoColor=%23e5e5e5)
+![Static Badge](https://img.shields.io/badge/tested_for_map.apps-4.20.0-%20?labelColor=%233E464F&color=%232FC050)
+
 # Elevation Profile
 This bundle enables the ElevationProfile Widget from Esri (new in ArcGIS API for JavaScript 4.18) in map.apps. It allows a user to input a polyline and calculates an elevation profile along this line.
 
